@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import {firestoreConnect} from 'react-redux-firebase';
 import {compose} from 'redux';
 import {Redirect} from 'react-router-dom';
-//import { stat } from 'fs';
+
 
 function ProjectDetails(props) {
     
@@ -21,7 +21,7 @@ function ProjectDetails(props) {
               </div>
               <div className="card-action grey lighten-4 grey-text">
                   <div> Posted By {project.authorFirstName} {project.authorLastName}</div>
-                  <div> 11th of November, 5:30pm</div>
+                  <div> {project.createdAt.toDate().toString()}</div>
               </div>
           </div>
       </div>
